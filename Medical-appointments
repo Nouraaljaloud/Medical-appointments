@@ -1,0 +1,28 @@
+import numpy as np 
+import pandas as pd 
+import matplotlib.pyplot as plt
+import seaborn as sns  
+% matplotlib inline
+
+# read file 
+df = pd.read_csv('noshowappointments.csv')
+df.head()
+
+df.shape
+#returns a tuple of the dimensions of the dataframe 
+#110527 Row and 14 Columns
+
+df.info()
+# check if there is  missing value 
+# No missing value 
+
+# check for duplicates in the data
+sum(df.duplicated())
+
+# drop duplicates
+df.drop_duplicates(inplace=True)
+sum(df.duplicated())
+
+df.describe()
+# -1 in age not accept 
+
